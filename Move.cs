@@ -8,7 +8,7 @@ namespace ConsoleApp
         public void Method()
         {
             Console.WriteLine("Do you want to move file or directory?");
-            string choise = Console.ReadLine();
+            string choise = Console.ReadLine().ToLower();
 
             Console.WriteLine("Enter path who to move");
             string source = Console.ReadLine();
@@ -17,7 +17,7 @@ namespace ConsoleApp
             string target = Console.ReadLine();
             DirectoryInfo dirTarget = new DirectoryInfo(target);
 
-            if (choise == "file" || choise == "File")
+            if (choise == "file" )
             {
                 FileInfo fileSource = new FileInfo(source);
                 if (fileSource.Exists && dirTarget.Exists)
@@ -26,10 +26,10 @@ namespace ConsoleApp
                 }
                 else
                 {
-                    Console.WriteLine("File or directory does not exist");
+                    Console.WriteLine("File does not exist");
                 }
             }
-            if (choise == "Directory" || choise == "directory" || choise == "dir")
+            if (choise == "directory" || choise == "dir")
             {
                 DirectoryInfo dirSource = new DirectoryInfo(source);
                 if (dirSource.Exists && dirTarget.Exists)
@@ -38,7 +38,7 @@ namespace ConsoleApp
                 }
                 else
                 {
-                    Console.WriteLine("File or directory does not exist");
+                    Console.WriteLine("Directory does not exist");
                 }
             }
 

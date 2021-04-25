@@ -9,8 +9,9 @@ namespace ConsoleApp
         public void Method()
         {
             Console.WriteLine("Directory or file?");
-            string path = Console.ReadLine();
-            if (path == "directory" || path == "dir" || path == "Directory")
+            string path = Console.ReadLine();//Not an actual path
+            path.ToLower();
+            if (path == "directory" || path == "dir")
             {
                 Console.WriteLine("Enter path");
                 path = Console.ReadLine();
@@ -26,10 +27,10 @@ namespace ConsoleApp
             }
             else
             {
-                if (path == "File" || path == "file")
+                if (path == "file")
                 {
                     Console.WriteLine("Enter path");
-                    path = Console.ReadLine();
+                    path = Console.ReadLine();//Not an actual path
                     if (!File.Exists(path))
                     {
                         using (FileStream fs = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None))
@@ -48,7 +49,7 @@ namespace ConsoleApp
                 }
                 else
                 {
-                    Console.WriteLine("Something went wrong");
+                    Console.WriteLine("Unsupported type");
                 }
             }
         }

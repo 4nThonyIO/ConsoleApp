@@ -11,11 +11,16 @@ namespace ConsoleApp
             string path = Console.ReadLine();
 
             FileInfo file = new FileInfo(path);
-            Console.WriteLine("Name is " + file.Name);
-            Console.WriteLine("Fullname is " + file.FullName);
-            Console.WriteLine("Size = " + file.Length + " bytes");
-            Console.WriteLine("Directory where file is " + file.DirectoryName);
-            Console.WriteLine("Was created " + file.CreationTime);
+            if (file.Exists)
+            {
+                Console.WriteLine("Name is " + file.Name);
+                Console.WriteLine("Fullname is " + file.FullName);
+                Console.WriteLine("Size = " + file.Length + " bytes");
+                Console.WriteLine("Directory where file is " + file.DirectoryName);
+                Console.WriteLine("Was created " + file.CreationTime);
+            }
+            else
+                Console.WriteLine("This file does not exist");
         }
 
     }

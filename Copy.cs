@@ -9,16 +9,15 @@ namespace ConsoleApp
         public void Method()
         {
             Console.WriteLine("Directory or file?");
-            string path = Console.ReadLine();
-            if (path == "directory" || path == "dir" || path == "Directory")
+            string path = Console.ReadLine();//Now it is not an actual path
+            path.ToLower();
+            if (path == "directory" || path == "dir")
             {
-                Console.WriteLine("Enter path");
+                Console.WriteLine("Enter source path");
                 path = Console.ReadLine();
                 if (Directory.Exists(path))
                 {
-                    Console.WriteLine("Enter source path");
-                    string source = Console.ReadLine();
-                    DirectoryInfo sourceDir = new DirectoryInfo(source);
+                    DirectoryInfo sourceDir = new DirectoryInfo(path);
 
                     Console.WriteLine("Enter target path");
                     string target = Console.ReadLine();
@@ -40,17 +39,15 @@ namespace ConsoleApp
             }
             else
             {
-                if (path == "File" || path == "file")
+                if (path == "file")
                 {
-                    Console.WriteLine("Enter path");
+                    Console.WriteLine("Enter source path");
                     path = Console.ReadLine();
                     if (File.Exists(path))
                     {
-                        Console.WriteLine("Enter source file path");
-                        string source = Console.ReadLine();
-                        FileInfo sourceInfo = new FileInfo(source);
+                        FileInfo sourceInfo = new FileInfo(path);
 
-                        Console.WriteLine("Enter target file path");
+                        Console.WriteLine("Enter target directory path");
                         string target = Console.ReadLine();
                         DirectoryInfo targetInfo = new DirectoryInfo(target);
 
@@ -63,7 +60,7 @@ namespace ConsoleApp
                 }
                 else
                 {
-                    Console.WriteLine("Something went wrong");
+                    Console.WriteLine("Unsupported type");
                 }
             }
         }

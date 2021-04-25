@@ -7,7 +7,7 @@ namespace ConsoleApp
     {
         public void Method()
         {
-            Console.WriteLine("Enter path to file whic to delete");
+            Console.WriteLine("Enter path to file which to delete");
             string path = Console.ReadLine();
             FileInfo file = new FileInfo(path);
             if (file.Exists)

@@ -18,15 +18,19 @@ namespace ConsoleApp
             DirectoryInfo dir = new DirectoryInfo(path);
 
             file = FileSearch(dir, name);
-            DirectorySearch(dir, name);
+            if (file == null)
+            {
+                file = DirectorySearch(dir, name);
+            }
+            
             if (file == null)
             {
                 Console.WriteLine("No such file");
             }
             else
-            Console.WriteLine("File is here:" + file.FullName);
+                Console.WriteLine("File is here:" + file.FullName);
         }
-        
+
         public FileInfo FileSearch(DirectoryInfo dir, string name)
         {
             foreach (var i in dir.GetFiles())
@@ -36,7 +40,7 @@ namespace ConsoleApp
                     return new FileInfo(i.FullName);
                 }
             }
-               return null;
+            return null;
         }
 
         public FileInfo DirectorySearch(DirectoryInfo dir, string name)
