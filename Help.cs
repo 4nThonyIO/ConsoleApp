@@ -22,7 +22,7 @@ namespace ConsoleApp
                 return;
             }
 
-            if (key == "showall")
+            if (key == "show")
             {
                 Console.WriteLine("ShowAll - Отображение всех файлов и папок в текущей директории");
                 return;
@@ -78,7 +78,7 @@ namespace ConsoleApp
 
             if (key == "general")
             {
-                Console.WriteLine("ShowAll - Отображение всех файлов и папок в текущей директории\n" +
+                Console.WriteLine("Show - Отображение всех файлов и папок в текущей директории\n" +
                 "Move - Перемещение файлов и папок\n" +
                 "Copy - Копирование файлов и папок\n" +
                 "Clear - Очистка экрана\n" +

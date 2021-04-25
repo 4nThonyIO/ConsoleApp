@@ -19,7 +19,7 @@ namespace ConsoleApp
             {
                 key = Console.ReadLine();//Ввод команды
                 log.Log.Add(key);//Добавление в лог
-                key.ToLower();//Превод к эдиному регистру
+                key = key.ToLower();//Превод к эдиному регистру
 
                 if (cmd.ContainsKey(key))//Если данная команда есть в наборе
                 {

@@ -10,7 +10,7 @@ namespace ConsoleApp
         {
             Console.WriteLine("Directory or file?");
             string path = Console.ReadLine();//Пока еще не путь
-            path.ToLower();
+            path = path.ToLower();
             if (path == "directory" || path == "dir")//Если папка
             {
                 Console.WriteLine("Enter path");
