@@ -52,6 +52,7 @@ namespace ConsoleApp
                         DirectoryInfo targetInfo = new DirectoryInfo(target);//Инфо об папке в которую копируем
 
                         sourceInfo.CopyTo(targetInfo.FullName, true);//Метод копирования
+                        Console.WriteLine("Success!");
                     }
                     else
                     {
@@ -79,7 +80,7 @@ namespace ConsoleApp
 
             foreach (FileInfo fi in source.GetFiles())//Копирование файлов
             {
-                Console.WriteLine(@"Copying {0}\{1}", target.FullName, fi.Name);//Выводим информацию о копировании 
+                Console.WriteLine(@"Copying {0}\{1}", target.FullName, fi.Name + " complete!");//Выводим информацию о копировании 
                 fi.CopyTo(Path.Combine(target.ToString(), fi.Name), true);//Копирование
             }
 

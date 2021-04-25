@@ -26,18 +26,21 @@ namespace ConsoleApp
                     cmd[key].Method();//Вызов команды
                 }
                 else
-                {   
-                    if(key == "history")//Если нужен вывод лога
+                {
+                    if (key == "history")//Если нужен вывод лога
                     {
                         log.ShowLog();//вывод
                     }
-                    if (key == "exit")//Если выход
+                    else
                     {
-                        Console.WriteLine("GoodBye!");//Прощяние
-                        menu = false;//Остановка цыкла меню
+                        if (key == "exit")//Если выход
+                        {
+                            Console.WriteLine("GoodBye!");//Прощяние
+                            menu = false;//Остановка цыкла меню
+                        }
+                        else//если совершена очепятка
+                            Console.WriteLine("No such command!");
                     }
-                    else//если совершена очепятка
-                        Console.WriteLine("No such command!");
                 }
 
 

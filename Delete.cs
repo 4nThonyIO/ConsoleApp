@@ -13,6 +13,7 @@ namespace ConsoleApp
             if (file.Exists)//Если файл существует
             {
                 file.Delete();//Удаление
+                Console.WriteLine("Delete succesful!");
             }
             else//Если файл не существует
             {

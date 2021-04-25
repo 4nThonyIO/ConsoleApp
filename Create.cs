@@ -40,7 +40,7 @@ namespace ConsoleApp
                                 sw.WriteLine("File created");//Запись
                             }
                         }
-                        Console.WriteLine("File creted succesfully");//Статус операции
+                        Console.WriteLine("File creted succesfully!");//Статус операции
                     }
                     else//Если уже существует
                     {
