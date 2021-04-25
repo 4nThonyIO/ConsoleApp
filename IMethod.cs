@@ -2,8 +2,8 @@ using System;
 
 namespace ConsoleApp
 {
-    interface IMethod
+    interface IMethod//Интерфес наличия метода
     {   
-        void Method(); 
+        void Method(); //Сам метода
     }
 }

@@ -3,23 +3,24 @@ using System.Collections.Generic;
 
 namespace ConsoleApp
 {
-    class CommandSet
+    class CommandSet//Класс с набором кооманд
     { 
-        public Dictionary<string, IMethod> App {get; set;}
+        public Dictionary<string, IMethod> App {get; set;}//Набор команд
 
         public CommandSet()
         {
-            App = new Dictionary<string, IMethod>();
-            App.Add("attribute", new Attributer());
-            App.Add("copy", new Copy());
-            App.Add("create", new Create());
-            App.Add("delete", new Delete());
-            App.Add("find", new Find());
-            App.Add("help", new Help());
-            App.Add("move", new Move());
-            App.Add("rename", new Rename());
-            App.Add("show", new Show());
-            App.Add("clear", new Clear());
+            App = new Dictionary<string, IMethod>();//Иницыализация
+            //Заполнение
+            App.Add("attribute", new Attributer());//Метод аттрибут
+            App.Add("copy", new Copy());//Метод копирования
+            App.Add("create", new Create());//Метод создания
+            App.Add("delete", new Delete());//Метод удаления
+            App.Add("find", new Find());//Метод нахождения
+            App.Add("help", new Help());//Метод поиска
+            App.Add("move", new Move());//Метод перемещения
+            App.Add("rename", new Rename());//Метод переименовывания
+            App.Add("show", new Show());//Метод вывода
+            App.Add("clear", new Clear());//Метод очистки екрана
         }
     }
 

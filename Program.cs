@@ -6,8 +6,8 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            CommandSet cmd = new CommandSet();
-            Start.Menu(cmd.App);
+            CommandSet cmd = new CommandSet();//Создание набора команд
+            Start.Menu(cmd.App);//Запуск меню
         }
     }
 }

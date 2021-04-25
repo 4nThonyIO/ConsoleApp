@@ -5,13 +5,13 @@ namespace ConsoleApp
 {
     class Logger
     {
-        public List<string> Log {get; set;}
+        public List<string> Log {get; set;}//Набор введенных команд
 
-        public Logger()
+        public Logger()//Конструктор по-умолчанию
         {
             Log = new List<string>();
         }
-        public void ShowLog()
+        public void ShowLog()//Вывод лога
         {
             foreach (var i in this.Log)
             {

@@ -4,11 +4,11 @@ namespace ConsoleApp
 {
     class Help: IMethod
     {  
-        public void Method()
+        public void Method()//Информация про команды
         {
             Console.WriteLine("Enter specific command or general for general description");
-            string key = Console.ReadLine();
-            key.ToLower();
+            string key = Console.ReadLine();//Уточняем команду
+            key.ToLower();//приводим к эдиному регистру
 
             if (key == "create")
             {

@@ -4,9 +4,9 @@ namespace ConsoleApp
 {
     class Clear : IMethod
     {
-        public void Method()
+        public void Method()//Очистка
         {
-            Console.Clear();
+            Console.Clear();//Очистка консоли
         }
     }
 

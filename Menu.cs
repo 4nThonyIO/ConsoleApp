@@ -5,38 +5,38 @@ namespace ConsoleApp
 {
     class Start
     {
-        public static void Menu(Dictionary<string, IMethod> cmd)
+        public static void Menu(Dictionary<string, IMethod> cmd)//Меню
         {
-            cmd["help"].Method();
+            cmd["help"].Method();//Вывод информации об команде
             Console.WriteLine();
 
-            Logger log = new Logger();
+            Logger log = new Logger();//Создание лога
 
             string key;
-            bool menu = true;
+            bool menu = true;//Переменная статуса меню
             
             while (menu)
             {
-                key = Console.ReadLine();
-                log.Log.Add(key);
-                key.ToLower();
+                key = Console.ReadLine();//Ввод команды
+                log.Log.Add(key);//Добавление в лог
+                key.ToLower();//Превод к эдиному регистру
 
-                if (cmd.ContainsKey(key))
+                if (cmd.ContainsKey(key))//Если данная команда есть в наборе
                 {
-                    cmd[key].Method();
+                    cmd[key].Method();//Вызов команды
                 }
                 else
                 {   
-                    if(key == "history")
+                    if(key == "history")//Если нужен вывод лога
                     {
-                        log.ShowLog();
+                        log.ShowLog();//вывод
                     }
-                    if (key == "exit")
+                    if (key == "exit")//Если выход
                     {
-                        Console.WriteLine("GoodBye!");
-                        menu = false;
+                        Console.WriteLine("GoodBye!");//Прощяние
+                        menu = false;//Остановка цыкла меню
                     }
-                    else
+                    else//если совершена очепятка
                         Console.WriteLine("No such command!");
                 }
 
