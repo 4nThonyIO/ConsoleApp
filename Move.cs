@@ -15,14 +15,15 @@ namespace ConsoleApp
 
             Console.WriteLine("Enter directory where to move");
             string target = Console.ReadLine();//Ввод пути цели
-            DirectoryInfo dirTarget = new DirectoryInfo(target);//Инфо о цели
+            FileInfo fileTarget = new FileInfo(target);//Инфо о цели
 
             if (choise == "file")//Если файл
             {
                 FileInfo fileSource = new FileInfo(source);//Получаем инфо об файле
-                if (fileSource.Exists && dirTarget.Exists)//Если и путь и источник существуют
+                if (fileSource.Exists)//Если путь существуют
                 {
-                    fileSource.MoveTo(dirTarget.FullName);//Перенос
+                    fileSource.MoveTo(fileTarget.FullName);//Перенос
+                    Console.WriteLine("Transfer succeful!");
                 }
                 else//Если нет
                 {
@@ -32,9 +33,10 @@ namespace ConsoleApp
             if (choise == "directory" || choise == "dir")//Если папка
             {
                 DirectoryInfo dirSource = new DirectoryInfo(source);//Получаем Инфо об папке
-                if (dirSource.Exists && dirTarget.Exists)//Если путь и цель существуют
+                if (dirSource.Exists)//Если путь и цель существуют
                 {
-                    dirSource.MoveTo(dirTarget.FullName);//Перенос
+                    dirSource.MoveTo(fileTarget.FullName);//Перенос
+                    Console.WriteLine("Transfer succes!");
                 }
                 else//Если нет
                 {

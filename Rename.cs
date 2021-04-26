@@ -1,5 +1,4 @@
 using System;
-using System.Text;
 using System.IO;
 
 namespace ConsoleApp
@@ -17,17 +16,15 @@ namespace ConsoleApp
                 Console.WriteLine("Enter path with new name");
                 path = Console.ReadLine();//Путь и новое имя
 
-                using (FileStream fs = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None))//Создание потока 
-                {
-                    using (StreamWriter sw = new StreamWriter(fs, Encoding.Unicode))//Создание потока записи
-                    {
-                        
-                    }
-                }
-
                 FileInfo file2 = new FileInfo(path);//Получение инфо об новом файле
-                File.Copy(file1.FullName, file2.FullName);//Копирование начального файла в новый
+                File.CopyTo(file2.FullName, true);//Копирование начального файла в новый
                 file1.Delete();//Удаление изначального файла
+                Console.WriteLine("Operation succesfull!");
+
+            }
+            else
+            {
+                Console.WriteLine("Such file does not exist!");
             }
         }
     }

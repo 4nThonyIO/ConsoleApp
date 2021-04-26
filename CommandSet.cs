@@ -11,7 +11,7 @@ namespace ConsoleApp
         {
             App = new Dictionary<string, IMethod>();//Иницыализация
             //Заполнение
-            App.Add("attribute", new Attributer());//Метод аттрибут
+            App.Add("attributes", new Attributer());//Метод аттрибут
             App.Add("copy", new Copy());//Метод копирования
             App.Add("create", new Create());//Метод создания
             App.Add("delete", new Delete());//Метод удаления
