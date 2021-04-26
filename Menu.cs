@@ -7,7 +7,7 @@ namespace ConsoleApp
     {
         public static void Menu(Dictionary<string, IMethod> cmd)//Меню
         {
-            cmd["help"].Method();//Вывод информации об команде
+            Info();//Вывод информации об командах
             Console.WriteLine();
 
             Logger log = new Logger();//Создание лога
@@ -47,6 +47,23 @@ namespace ConsoleApp
             }
 
         }
+
+        public static void Info()
+        {
+            Console.WriteLine("Show - Отображение всех файлов и папок в текущей директории\n" +
+                "Move - Перемещение файлов и папок\n" +
+                "Copy - Копирование файлов и папок\n" +
+                "Clear - Очистка экрана\n" +
+                "Attributes - Просмотр атрибутов указанного файла\n" +
+                "Rename - Переименование файлов\n" +
+                "Create - Создание\n" +
+                "Delete - Удаление\n" +
+                "Find - Поиск файлов\n" +
+                "History - Истории введенных команд\n" +
+                "Exit - Выход");
+        }
+
+
 
     }
 }
