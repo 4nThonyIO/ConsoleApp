@@ -10,6 +10,7 @@ namespace ConsoleApp
         public Logger()//Конструктор по-умолчанию
         {
             Log = new List<string>();
+            LoggerNLog.Info($"History list created");
         }
         public void ShowLog()//Вывод лога
         {
@@ -17,6 +18,7 @@ namespace ConsoleApp
             {
                 Console.Write(i + '\t');
             }
+            LoggerNLog.Info($"History showed");
         }
     }
 

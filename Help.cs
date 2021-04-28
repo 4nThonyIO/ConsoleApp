@@ -8,6 +8,7 @@ namespace ConsoleApp
         {
             Console.WriteLine("Enter specific command or general for general description");
             string key = Console.ReadLine();//Уточняем команду
+            LoggerNLog.Info($"Key enterd. Key = {key}");
             key.ToLower();//приводим к эдиному регистру
 
             if (key == "create")
@@ -98,6 +99,7 @@ namespace ConsoleApp
                 return;
             }
 
+            LoggerNLog.Warn($"No such command yet. Key = {key}");
             Console.WriteLine("No such command!");
         }
 
