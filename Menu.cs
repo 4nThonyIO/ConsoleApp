@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace ConsoleApp
 {
@@ -14,9 +15,12 @@ namespace ConsoleApp
 
             string key;
             bool menu = true;//Переменная статуса меню
-            
+            string username = GetUser();//Получениеимени пользователя 
+            Copyrights();//Вывод легальной информации 
+
             while (menu)
             {
+                Console.Write(username + ">");//Вывод главной директории
                 key = Console.ReadLine();//Ввод команды
                 log.Log.Add(key);//Добавление в лог
                 key = key.ToLower();//Превод к эдиному регистру
@@ -63,7 +67,24 @@ namespace ConsoleApp
                 "Exit - Выход");
         }
 
+        public static void Copyrights()//Вывод юридической информации
+        {
+            Random rnd = new Random();//Генерация версии виндовс
+            Console.WriteLine("Microsoft Windows [Version 10.0." + rnd.Next(1000, 99999)+"."+rnd.Next(100, 999)+"]");
+            Console.WriteLine("(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.");//Вывод инфо
+            Console.WriteLine();
+        }
 
-
+        public static string GetUser()//Получение имени пользователя
+        {
+            DirectoryInfo dir = new DirectoryInfo(@"c:\Users");//Получаем инфо об директории с пользователями
+            foreach(var subdir in dir.GetDirectories())//Ищем пользователя с именем
+            {   
+                if(subdir.Name != "Public")//Если имя не public
+                {
+                    return subdir.FullName;//Возвращяем путь
+                }
+            }
+        }
     }
 }
