@@ -15,7 +15,7 @@ namespace ConsoleApp
 
             string key;
             bool menu = true;//Переменная статуса меню
-            string username = GetUser();//Получениеимени пользователя 
+            string username = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);//Получениеимени пользователя 
             Copyrights();//Вывод легальной информации 
 
             while (menu)
@@ -85,6 +85,8 @@ namespace ConsoleApp
                     return subdir.FullName;//Возвращяем путь
                 }
             }
+
+            return null;
         }
     }
 }

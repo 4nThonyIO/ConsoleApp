@@ -17,7 +17,7 @@ namespace ConsoleApp
                 path = Console.ReadLine();//Путь и новое имя
 
                 FileInfo file2 = new FileInfo(path);//Получение инфо об новом файле
-                File.CopyTo(file2.FullName, true);//Копирование начального файла в новый
+                file1.CopyTo(file2.FullName, true);//Копирование начального файла в новый
                 file1.Delete();//Удаление изначального файла
                 Console.WriteLine("Operation succesfull!");
 

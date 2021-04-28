@@ -1,0 +1,15 @@
+/Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/obj/Debug/net5.0/ConsoleApp.csprojAssemblyReference.cache
+/Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/obj/Debug/net5.0/ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/obj/Debug/net5.0/ConsoleApp.AssemblyInfoInputs.cache
+/Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/obj/Debug/net5.0/ConsoleApp.AssemblyInfo.cs
+/Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/obj/Debug/net5.0/ConsoleApp.csproj.CoreCompileInputs.cache
+/Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/bin/Debug/net5.0/ConsoleApp.deps.json
+/Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/bin/Debug/net5.0/ConsoleApp.runtimeconfig.json
+/Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/bin/Debug/net5.0/ConsoleApp.runtimeconfig.dev.json
+/Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/bin/Debug/net5.0/ConsoleApp.dll
+/Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/bin/Debug/net5.0/ref/ConsoleApp.dll
+/Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/bin/Debug/net5.0/ConsoleApp.pdb
+/Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/obj/Debug/net5.0/ConsoleApp.dll
+/Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/obj/Debug/net5.0/ref/ConsoleApp.dll
+/Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/obj/Debug/net5.0/ConsoleApp.pdb
+/Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/obj/Debug/net5.0/ConsoleApp.genruntimeconfig.cache
