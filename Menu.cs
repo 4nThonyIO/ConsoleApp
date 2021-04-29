@@ -22,34 +22,34 @@ namespace ConsoleApp
             {
                 Console.Write(username + ">");//Вывод главной директории
                 key = Console.ReadLine();//Ввод команды
-                LoggerNLog.Info($"Key entered. Key = {key}");
+                //LoggerNLog.Info($"Key entered. Key = {key}");
                 log.Log.Add(key);//Добавление в лог
-                LoggerNLog.Info($"Key added to history. Key = {key}");
+                //LoggerNLog.Info($"Key added to history. Key = {key}");
                 key = key.ToLower();//Превод к эдиному регистру
 
                 if (cmd.ContainsKey(key))//Если данная команда есть в наборе
                 {
                     cmd[key].Method();//Вызов команды
-                    LoggerNLog.Info($"Method {key} worked");
+                    //LoggerNLog.Info($"Method {key} worked");
                 }
                 else
                 {
                     if (key == "history")//Если нужен вывод лога
                     {
                         log.ShowLog();//вывод
-                        LoggerNLog.Info($"Method history worked");
+                        //LoggerNLog.Info($"Method history worked");
                     }
                     else
                     {
                         if (key == "exit")//Если выход
                         {
-                            LoggerNLog.Info($"Program shut down");
+                            //LoggerNLog.Info($"Program shut down");
                             Console.WriteLine("GoodBye!");//Прощяние
                             menu = false;//Остановка цыкла меню
                         }
                         else//если совершена очепятка
                         {
-                            LoggerNLog.Warn($"Wrong command. Comand = {key}");
+                            //LoggerNLog.Warn($"Wrong command. Comand = {key}");
                             Console.WriteLine("No such command!");
                         }
                     }

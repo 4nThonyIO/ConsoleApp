@@ -21,7 +21,7 @@ namespace ConsoleApp
             App.Add("rename", new Rename());//Метод переименовывания
             App.Add("show", new Show());//Метод вывода
             App.Add("clear", new Clear());//Метод очистки екрана
-            LoggerNLog.Info($"Commands were set");
+            //LoggerNLog.Info($"Commands were set");
         }
     }
 

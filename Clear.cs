@@ -6,7 +6,7 @@ namespace ConsoleApp
     {
         public void Method()//Очистка
         {
-            LoggerNLog.Info($"Console cleared");
+            //LoggerNLog.Info($"Console cleared");
             Console.Clear();//Очистка консоли
         }
     }

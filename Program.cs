@@ -8,7 +8,7 @@ namespace ConsoleApp
         {
             try
             {
-                LoggerNLog.Info($"Program started.");
+                //LoggerNLog.Info($"Program started.");
                 CommandSet cmd = new CommandSet();//Создание набора команд
                 Start.Menu(cmd.App);//Запуск меню
             }
