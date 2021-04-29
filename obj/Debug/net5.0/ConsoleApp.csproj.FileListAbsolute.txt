@@ -13,3 +13,5 @@
 /Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/obj/Debug/net5.0/ref/ConsoleApp.dll
 /Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/obj/Debug/net5.0/ConsoleApp.pdb
 /Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/obj/Debug/net5.0/ConsoleApp.genruntimeconfig.cache
+/Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/bin/Debug/net5.0/NLog.dll
+/Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/obj/Debug/net5.0/ConsoleApp.csproj.CopyComplete

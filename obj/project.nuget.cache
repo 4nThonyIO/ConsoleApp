@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "IfTJb0XC485yXeCsqOalw8jLeqlpHLgMvcKfsGezbteWaAj8wv30Yhzf0301uMCWNGOKI0nKe8bDV99B6Mz0xw==",
+  "dgSpecHash": "oqrHstt9u9rIp0KkRminfmN4JNJThkgpxoo2R6q7IY6vCxJ8oewy2vxnEhtFtBnhYW/16pBGClXZmVeGIHP3pg==",
   "success": true,
   "projectFilePath": "/Users/__n_tony/Desktop/ConsoleAppRepo/ConsoleApp/ConsoleApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/__n_tony/.nuget/packages/nlog/4.7.9/nlog.4.7.9.nupkg.sha512",
+    "/Users/__n_tony/.nuget/packages/nlog.schema/4.7.9/nlog.schema.4.7.9.nupkg.sha512"
+  ],
   "logs": []
 }

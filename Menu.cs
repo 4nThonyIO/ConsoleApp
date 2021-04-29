@@ -82,19 +82,5 @@ namespace ConsoleApp
             Console.WriteLine("(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.");//Вывод инфо
             Console.WriteLine();
         }
-
-        public static string GetUser()//Получение имени пользователя
-        {
-            DirectoryInfo dir = new DirectoryInfo(@"c:\Users");//Получаем инфо об директории с пользователями
-            foreach(var subdir in dir.GetDirectories())//Ищем пользователя с именем
-            {   
-                if(subdir.Name != "Public")//Если имя не public
-                {
-                    return subdir.FullName;//Возвращяем путь
-                }
-            }
-
-            return null;
-        }
     }
 }

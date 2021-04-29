@@ -32,7 +32,7 @@ namespace ConsoleApp
                 else//Если нет
                 {
                     //LoggerNLog.Warn($"Path to file does not exist. Path = {source}");
-                    //Console.WriteLine("File does not exist");
+                    Console.WriteLine("File does not exist");
                 }
             }
             if (choise == "directory" || choise == "dir")//Если папка
