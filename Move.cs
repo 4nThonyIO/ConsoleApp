@@ -35,25 +35,28 @@ namespace ConsoleApp
                     Console.WriteLine("File does not exist");
                 }
             }
-            if (choise == "directory" || choise == "dir")//Если папка
-            {
-                DirectoryInfo dirSource = new DirectoryInfo(source);//Получаем Инфо об папке
-                if (dirSource.Exists)//Если путь и цель существуют
-                {
-                    dirSource.MoveTo(fileTarget.FullName);//Перенос
-                    Console.WriteLine("Transfer succes!");
-                    //LoggerNLog.Info($"Move succesfull. Path = {fileTarget.FullName}");
-                }
-                else//Если нет
-                {
-                    //LoggerNLog.Warn($"Path to file does not exist. Path = {source}");
-                    Console.WriteLine("Directory does not exist");
-                }
-            }
             else
             {
-                Console.WriteLine("Wrong type!");
-                //LoggerNLog.Warn($"Wrong choise. Choise = {choise}. Possible choise = File/Dir");
+                if (choise == "directory" || choise == "dir")//Если папка
+                {
+                    DirectoryInfo dirSource = new DirectoryInfo(source);//Получаем Инфо об папке
+                    if (dirSource.Exists)//Если путь и цель существуют
+                    {
+                        dirSource.MoveTo(fileTarget.FullName);//Перенос
+                        Console.WriteLine("Transfer succes!");
+                        //LoggerNLog.Info($"Move succesfull. Path = {fileTarget.FullName}");
+                    }
+                    else//Если нет
+                    {
+                        //LoggerNLog.Warn($"Path to file does not exist. Path = {source}");
+                        Console.WriteLine("Directory does not exist");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Wrong type!");
+                    //LoggerNLog.Warn($"Wrong choise. Choise = {choise}. Possible choise = File/Dir");
+                }
             }
         }
     }
